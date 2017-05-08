@@ -15,4 +15,6 @@ register = template.Library()
 @register.filter('title_case')
 def title_case(name):
     '''title case a word'''
-    return name.title()
+    if name != None:
+        return name.title()
+    return name

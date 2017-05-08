@@ -5,7 +5,7 @@
         <ul class="minerals__container">
             {% for mineral in minerals %}
                 <li class="minerals__item">
-                    <a href="{% url 'minerals:detail' pk=mineral.pk %}">
+                    <a class="minerals__anchor" href="{% url 'minerals:detail' pk=mineral.pk %}">
                         {{mineral.name}}
                     </a>
                 </li>

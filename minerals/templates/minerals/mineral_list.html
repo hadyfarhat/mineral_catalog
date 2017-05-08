@@ -1,0 +1,15 @@
+{% extends "_base.html" %}
+
+{% block content %}
+    <div class="grid-100">
+        <ul class="minerals__container">
+            {% for mineral in minerals %}
+                <li class="minerals__item">
+                    <a href="{% url 'minerals:detail' pk=mineral.pk %}">
+                        {{mineral.name}}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

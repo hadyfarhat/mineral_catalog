@@ -1,4 +1,5 @@
 {% extends "_base.html" %}
+{% load mineral_extras %}
 
 {% block content %}
     <div class="grid-100">
@@ -6,7 +7,7 @@
             {% for mineral in minerals %}
                 <li class="minerals__item">
                     <a class="minerals__anchor" href="{% url 'minerals:detail' pk=mineral.pk %}">
-                        {{mineral.name}}
+                        {{mineral.name|truncate}}
                     </a>
                 </li>
             {% endfor %}

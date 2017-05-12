@@ -1,0 +1,9 @@
+{# {% load mineral_extras %}
+
+{% for mineral in truncated_minerals %}
+    <li class="minerals__item">
+        <a class="minerals__anchor" href="{% url 'minerals:detail' pk=mineral.pk %}">
+            {{mineral.name|truncate}}
+        </a>
+    </li>
+{% endfor %} #}

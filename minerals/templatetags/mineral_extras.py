@@ -1,6 +1,5 @@
 from django import template
 
-from minerals.models import Mineral
 
 register = template.Library()
 
@@ -15,7 +14,8 @@ register = template.Library()
 @register.filter('title_case')
 def title_case(name):
     '''title case a word'''
-    if name != None:
+    # if name != None:
+    if name is not None:
         return name.title()
     return name
 

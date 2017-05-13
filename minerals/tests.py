@@ -3,6 +3,7 @@ from django.core.urlresolvers import reverse
 
 from .models import Mineral
 
+
 class MineralModelTest(TestCase):
     def setUp(self):
         self.m = Mineral.objects.create(
@@ -11,6 +12,7 @@ class MineralModelTest(TestCase):
 
     def test_mineral_creation(self):
         self.assertEqual("mineral 1", self.m.name)
+
 
 class MineralViewTest(TestCase):
     def setUp(self):
